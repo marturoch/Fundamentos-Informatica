@@ -1,3 +1,4 @@
+'''
 EXPRESIONES REGULARES (Clase 3 teorica)
 
 3. Metacaracteres
@@ -20,7 +21,7 @@ Todas las ocurrencias de algun substring que aparezca entre X y Y, incluyendolos
 [a-z]{3,6} 
 
 🧗‍♀️ Desafío III: ¿Construí la expresión regular que obtenga todas las apariciones del patrón ab en un string?
-ab*
+(ab)*
 Para pensar 🤔: ¿Existe una única respuesta para los ejercicios? ¿Qué otras alternativas se te ocurren?
 
 🧗‍♀️Desafio IV: ¿Qué expresión regular usarías para extraer el número de estudiantes que hay en una clase según el siguiente texto:
@@ -30,34 +31,43 @@ texto = 'En la clase de Introducción a la programación hay 30 estudiantes'
 4. Expresiones regulares en Python(ningun desafio)
 
 5. Coincidencias o Matches
->>> import re
->>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
->>> patron = "amet"
->>> re.search(patron, texto)
+'''
+import re
+texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+patron = "amet"
+print(re.search(patron, texto))
+'''
 Para pensar 🤔: ¿Qué resultado obtenemos al ejecutar en la última linea?
 <re.Match object; span=(22, 26), match='amet'>
 
-🧗‍♀️Desafio V: imprimí el fragmento del texto entre la posición 22 y 26 ¿Qué resultado obtenés? ¿Qué quiere decir el mensaje span?
->>> texto[22:26]
-'amet'
+Desafio V: imprimí el fragmento del texto entre la posición 22 y 26 ¿Qué resultado obtenés? ¿Qué quiere decir el mensaje span?
+'''
+print(texto[22:26])
+#amet
 
->>> import re
->>> texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
->>> patron = "amet"
->>> re.search(patron, texto).group() 
+texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet et amet."
+patron = "amet"
+string = re.search(patron, texto).group()
+'''
 Para pensar 🤔: ¿Qué resultado obtenemos? ¿Para qué sirve la función group()?
 'amet'
 group() sirve para convertir el objeto del search a un string
-
+'''
+print(type(string))  #me dice que es un string
+'''
 🧗‍♀️Desafio VI: Expresá el patrón de búsqueda utilizando lo visto anteriormente sobre metacaracteres y rangos.
->>>patron = "amet*"
->>>re.search(patron, texto)
-['amet', 'amet']
-
+'''
+patron = "amet*"
+print(re.search(patron, texto).group())
+#amet
+print(re.findall(patron, texto))
+#['amet', 'amet'] --> encuentra todos y los devuelve en una lista
+'''
 6.Reemplazos o sustitutciones masivas
-
->>>re.sub(patron, "###", texto)
+'''
+print(re.sub(patron, "###", texto))
+'''
 Para pensar 🤔: ¿Qué resultado obtenemos? ¿Para qué sirve la función sub?
->>> texto = "Lorem ipsum dolor sit ###, consectetur adipiscing elit. Amet et ###."
+nos devuelve "Lorem ipsum dolor sit ###, consectetur adipiscing elit. Amet et ###."
 sub permite reemplazar todos las ocurrencias del patrón por otro patrón en un String.
-
+'''
