@@ -1,0 +1,10 @@
+ls --> me muestra todo lo que tengo dentro del directorio donde estoy parado
+$ ls
+ COSTOS/       'MICRO I'/
+ EXCEL/        'PROBABILIDAD Y ESTADISTICA'/    
+ INFORMATICA/   pruebaa.txt
+
+pwd --> me da la ruta donde estoy parado
+$ pwd
+/c/Users/martu/Documents/martu/UCEMA/2 - PRIMER 
+CUATRI
