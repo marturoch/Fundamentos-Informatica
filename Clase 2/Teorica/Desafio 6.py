@@ -1,8 +1,3 @@
-#7
-#def vaquita(costos, comensales):
-   # return costos / comensales
-#print(vaquita(100,10))
-
 def mate(personas):
     agua = (personas * 30)
     resultado = agua / 1000
