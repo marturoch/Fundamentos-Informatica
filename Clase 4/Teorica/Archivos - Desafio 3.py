@@ -1,8 +1,8 @@
 #Desafío III: Abrí el archivo bio.txt y escribí una mini biografía de presentación. 
 # Para pensar 🤔:¿Cómo darías formato al texto que estas creando?
-with open(r'C:\Users\martu\Documents\martu\UCEMA\2 - PRIMER CUATRI\INFORMATICA\Clase4\Bio.txt', 'w') as file:
+with open(r'C:\Users\martu\Documents\martu\UCEMA\2 - PRIMER CUATRI\INFORMATICA\Bio.txt', 'w') as file:
     file.write("Me llamo Martina. \nTengo 19. \nEstoy en mi segundo año de facultad estudiando Negocios Digitales en UCEMA.")
-texto = open(r'C:\Users\martu\Documents\martu\UCEMA\2 - PRIMER CUATRI\INFORMATICA\Clase4\Bio.txt','r')
+texto = open(r'C:\Users\martu\Documents\martu\UCEMA\2 - PRIMER CUATRI\INFORMATICA\Bio.txt','r')
 text = texto.read()
 print(text)
 texto.close()
