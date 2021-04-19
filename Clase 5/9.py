@@ -5,12 +5,16 @@ path = r'C:\Users\martu\Documents\martu\UCEMA\2 - PRIMER CUATRI\INFORMATICA\Clas
 with open(path, 'r') as file:
     texto = file.read()
     palabras = texto.split()
+    palabras_sin_coma = []
+    for i in palabras:
+        palabra = i.strip(",")
+        palabras_sin_coma.append(palabra)
     frecuencias = {}
-    for palabra in palabras:
+    for palabra in palabras_sin_coma:
         if palabra in frecuencias:
             frecuencias[palabra] += 1
         else:
             frecuencias[palabra] = 1
     for palabra in frecuencias:
         frecuencia = frecuencias[palabra]
-        print("La palabra " + r"'"+ str(palabra) + r"'"+ " tiene una frecuencia de " + str(frecuencia))
+        print("La palabra "+ str(palabra) + " tiene una frecuencia de " + str(frecuencia))
