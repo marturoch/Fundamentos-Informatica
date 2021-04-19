@@ -1,0 +1,17 @@
+>>> print(divisor)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'divisor' is not defined
+Para pensar 🤔: ¿Qué nos dice el mensaje de excepción? ¿Qué es la excepción de nombre?
+nos dice que no hay ninguna variable llamada divisor. No sabe que imprimir porque no está definido.
+NameError → no se encuentra un nombre local o global
+
+>>> 0 + "2"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+Para pensar 🤔: ¿Qué nos dice el último mensaje de excepción? ¿Qué es la excepción de tipo?
+Nos dice que no se puede sumar un int. y un string
+TypeError → Se genera cuando una operación o función se aplica a un objeto de tipo inapropiado. 
+
+

@@ -1,0 +1,18 @@
+BIBLIOTECA OS JUNTO CON GLOB
+>>> import glob
+>>> import os
+>>> path = os.getcwd()
+>>> path
+'C:\\Users\\martu\\Documents\\martu\\UCEMA\\2 - 
+PRIMER CUATRI'
+
+>>> glob.glob(path+'/*')
+['C:\\Users\\martu\\Documents\\martu\\UCEMA\\2 - PRIMER CUATRI\\COSTOS', 'C:\\Users\\martu\\Documents\\martu\\UCEMA\\2 - PRIMER CUATRI\\EXCEL', 
+'C:\\Users\\martu\\Documents\\martu\\UCEMA\\2 - 
+PRIMER CUATRI\\INFORMATICA', 'C:\\Users\\martu\\Documents\\martu\\UCEMA\\2 - PRIMER CUATRI\\MICRO I', 'C:\\Users\\martu\\Documents\\martu\\UCEMA\\2 - PRIMER CUATRI\\PROBABILIDAD Y ESTADISTICA', 'C:\\Users\\martu\\Documents\\martu\\UCEMA\\2 
+- PRIMER CUATRI\\pruebaa.txt']
+--> Me trae todo lo que esta en esa carpeta
+
+>>> glob.glob(path+'/*.txt')
+['C:\\Users\\martu\\Documents\\martu\\UCEMA\\2 - PRIMER CUATRI\\pruebaa.txt']
+--> me trae solo los archivos que sean texto y esten dentro de la carpeta donde estoy parado
