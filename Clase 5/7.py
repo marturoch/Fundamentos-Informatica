@@ -4,9 +4,13 @@ with open(path, 'r') as file:
     texto = file.read()
     print(texto)
     palabras = texto.split()
-    print(palabras)
-    mas_larga = len(max(palabras, key=len))
-    print(mas_larga)
+    palabras_sin_coma = []
     for i in palabras:
+        palabra = i.strip(",") #esto es porque hay palabras que tienen seguida una coma y hay que sacarla porque cuenta como caracter.
+        palabras_sin_coma.append(palabra)
+    print(palabras_sin_coma)
+    mas_larga = len(max(palabras_sin_coma, key=len))
+    print(mas_larga)
+    for i in palabras_sin_coma:
         if len(i) == mas_larga:
             print(str(i) + " es la palabras mas larga y tiene " + str(mas_larga) + " caracteres")
