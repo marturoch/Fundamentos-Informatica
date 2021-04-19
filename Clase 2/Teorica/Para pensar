@@ -1,0 +1,45 @@
+PARA PENSAR
+>>> 3*5
+Para pensar 🤔:¿Cuál es el resultado? ¿Qué significa entonces el *?
+El resultado es 15. * es para multiplicar
+>>>8/4
+Para pensar 🤔:¿Cuál es el resultado? ¿Qué significa entonces el /?
+El resultado es 2. / es para dividir
+
+>>> edad_lola = 13
+>>> edad_ana = 32
+>>> edad_lola == edad_ana
+Para pensar 🤔:¿Cuál es el resultado? ¿Qué tipo de dato es?
+El resultado es False. Es un booleano.
+
+>>> afirmacion = "si"
+>>> gran_afirmacion = "SI"
+>>> gran_afirmacion == afirmacion
+Para pensar 🤔:¿Qué resultado nos da? ¿Por qué?
+El resultado es False. Esto es porque la s minuscula no es lo mismo que la S mayuscula.
+
+Para pensar 🤔:¿Que posición tendrá la letra "C' en el string "Marie Curie"? ¿Por qué?
+Posicion 6. Se arranca contando desde el 0 y los espacios cuentan como caracteres.
+
+>>> saludo = "Hola mundo"
+>>> saludo[0:3]
+Para pensar 🤔:¿Qué resultado nos dá el código anterior? ¿Por qué? ¿Qué pasa si removemos el último número (hacemos saludo[0:])?
+Nos da como resultado 'Hol'. Esto es porque nos devuelve los caracteres que estan entre la posicion 0 y 3, sin incluir el 3.
+Si removemos el ultimo numero y hacemos saludo[0:] nos devuelve 'Hola mundo', porque nos devuelve todos los caracteres desde la posicion 0 hasta el final.
+
+LISTAS
+>>> lista = [2,5,4]
+>>> lista[0]
+Para pensar 🤔: ¿Cómo podrías conocer la longitud de la lista?
+Con len(lista)
+
+>>> lista.append('25')
+>>> lista.remove('25')
+Para pensar 🤔: Probá la sentencia lista.index('25') ¿Qué resultado obtenes? ¿Para qué sirve index()
+Obtenemos 3. Nos devuelve la posicion en la que se encuentra lo que le pasamos al parametro dentro de la lista.
+En este caso el 25 se encuentra en la posicion 3 de la lista.
+
+DICCIONARIO
+Para pensar 🤔: ¿Cómo harías para obtener todos los valores de un diccionario?
+nombre_del_diccionario.values()
+Ejemplo si mi diccionario se llama comida, haria comida.values()
