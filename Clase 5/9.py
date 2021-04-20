@@ -9,6 +9,7 @@ with open(path, 'r') as file:
     for i in palabras:
         palabra = i.strip(",")
         palabras_sin_coma.append(palabra)
+    cantidad_palabras = len(palabras_sin_coma)
     frecuencias = {}
     for palabra in palabras_sin_coma:
         if palabra in frecuencias:
@@ -16,5 +17,5 @@ with open(path, 'r') as file:
         else:
             frecuencias[palabra] = 1
     for palabra in frecuencias:
-        frecuencia = frecuencias[palabra]
+        frecuencia = frecuencias[palabra] / cantidad_palabras
         print("La palabra "+ str(palabra) + " tiene una frecuencia de " + str(frecuencia))
