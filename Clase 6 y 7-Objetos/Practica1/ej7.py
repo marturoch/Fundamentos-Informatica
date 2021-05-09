@@ -27,7 +27,7 @@ class Gorrion:
         else:
             return self.kms / self.gramos
     def CSSP(self):
-        if self.gramos <= 0:
+        if self.gramos <= 0: #si no ingiere gramos entonces no hay elementos en la lista de comidas
             return "no puedo devolver el CSSP, porque no ha hingerido comida"
         else:
             return int(max(self.vuelos)) / int(max(self.comidas))
