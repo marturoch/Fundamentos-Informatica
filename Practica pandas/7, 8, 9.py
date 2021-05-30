@@ -14,7 +14,6 @@ print(df.head(3))
 #Ejercicio 8
 #Realizá un programa que seleccione e impirma las columnas "nombre" y
 #  "puntaje" del DataFrama anterior.
-print(df.groupby('nombre').puntaje.count())
 print(df['nombre'])
 #a    Agustina
 #b       Diana
