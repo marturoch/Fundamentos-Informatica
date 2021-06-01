@@ -43,25 +43,40 @@ print(df['puntaje'])
 #Escribí un programa que dado el DataFrame anterior imprima 
 # los nombres en mayúscula y la longitud de los mismos en 
 # una nueva tabla.
+#forma 1
 nombres = df['nombre'].tolist()
 nombres_mayus = []
 longitud = []
 for i in nombres:
     nombres_mayus.append(i.upper())
     longitud.append(len(i))
-serie = pd.Series(longitud, nombres_mayus)
-#el primero va en la segunda columna, el segundo en la primer columna
-print(serie)
-#AGUSTINA    8
-#DIANA       5
-#KAREN       5
-#JULIÁN      6
-#EMILIO      6
-#MIGUEL      6
-#MATEO       5
-#LAURA       5
-#JORGE       5
-#LUCAS       5
-#dtype: int64
-df = pd.DataFrame(serie)
-print(df)
+serie = pd.Series(nombres_mayus, longitud, name="NOMBRES")
+df2 = pd.DataFrame(serie)
+print(df2)
+#    NOMBRES
+#8  AGUSTINA
+#5     DIANA
+#5     KAREN
+#6    JULIÁN
+#6    EMILIO
+#6    MIGUEL
+#5     MATEO
+#5     LAURA
+#5     JORGE
+#5     LUCAS
+
+#otra forma mas corta
+longitud = df.nombre.str.len().to_list()
+df3= pd.DataFrame(datos_ejemplo, index=longitud)
+print(df3.nombre.str.upper())
+#8    AGUSTINA
+#5       DIANA
+#5       KAREN
+#6      JULIÁN
+#6      EMILIO
+#6      MIGUEL
+#5       MATEO
+#5       LAURA
+#5       JORGE
+#5       LUCAS
+#Name: nombre, dtype: object
